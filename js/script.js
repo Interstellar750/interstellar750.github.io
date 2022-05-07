@@ -40,7 +40,7 @@ document.ready(
         if (isDark) {
             document.getElementById("switch_default").checked = true;
             // mobile
-            document.getElementById("mobile-toggle-theme").innerText = "· 暗色模式"
+            document.getElementById("mobile-toggle-theme").innerText = "· Dark"
         } else {
             document.getElementById("switch_default").checked = false;
             // mobile
@@ -54,7 +54,7 @@ document.ready(
             } else {
                 pagebody.classList.remove('dark-theme');
                 // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· 亮色模式"
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
             }
             document.getElementsByClassName('toggleBtn')[0].addEventListener('click', () => {
                 if (pagebody.classList.contains('dark-theme')) {

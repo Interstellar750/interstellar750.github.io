@@ -1,600 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hubert&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hubert&#39;s Blog">
-<meta property="og:url" content="https://trle5.tk/index.html">
-<meta property="og:site_name" content="Hubert&#39;s Blog">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Hubert Chen">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hubert's Blog" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Hubert Chen">
+
+
+    <meta name="subtitle" content="Now nothing here">
+
+
+
+
+<title>Hubert&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
+    <link rel="stylesheet" href="/css/style.css">
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-  
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+
 <meta name="generator" content="Hexo 6.0.0"></head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hubert&#39;s Blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">Now nothing here</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://trle5.tk"></form>
-      </div>
-    </div>
-  </div>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· 暗色模式"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· 亮色模式"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Hubert&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/tags">标签</a>
+                
+                    <a class="menu-item" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Hubert&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; 菜单</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/tags">标签</a>
+                
+                    <a class="menu-item" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
 </header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-Page4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/04/07/Page4/" class="article-date">
-  <time class="dt-published" datetime="2022-04-07T00:06:21.000Z" itemprop="datePublished">2022-04-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/07/Page4/">闲谈杂聊</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p> 你好，欢迎来我的博客看文章，祝愿你天天开心</p>
-<h2 id="回顾搭建博客之前"><a href="#回顾搭建博客之前" class="headerlink" title="回顾搭建博客之前"></a>回顾搭建博客之前</h2><p>大概一个多星期前，我去翻了翻之前收藏的博客，发现只有很少的博客更新了几篇新文章，大多数的博客基本都停了，还有一些博客直接停了两年没更新</p>
-<p>至于为什么我会收藏博客，因为没搭建博客之前也有想法自己搭一个，似乎大多数博客也会写一个关于搭建的文章，于是我目前每看见一个个人博客都会添加到书签里</p>
-<p>而我的博客也已经一个多月没有更新新文章了，我并没有确定写作方向，恐怕就是更新力不足的原因</p>
-<p>以后博客可能会<del>月更</del>季更更符合实际吧，因为写一篇文章随便写点东西也不太好的样子，像这种闲聊的文章应该会比教程类的多一些</p>
-<h2 id="最近在学习的东西"><a href="#最近在学习的东西" class="headerlink" title="最近在学习的东西"></a>最近在学习的东西</h2><p>大概从寒假下半旬开始，我在 Yogabook 上试着画画，不过毕竟是笔记本嘛，屏幕大小和显示效果都不怎么好，于是我就利用 转换器把它接到我的台式机显示器上，于是我就有了一个正式练习画画的地方</p>
-<p>最近还买了个新数位板，还得熟悉熟悉，感觉自己桌面空间是有点小了，之前想画画的话就得把键盘鼠标全都挪开，想用台式又得把显示器接回去，现在可以直接在台式画了</p>
-<p>不过嘛，一个新手是没办法一下子就学会画画的，找了些教学视频，我得知了自己画画的问题： 勾线不好看，一条线没画好就随便擦一下应付，勾线应该一笔勾不好重新勾，于是我找了一些简单的二次元图来联系勾线，就是在 SAI 在原图上叠一个图，调整透明度就照着描，以往是希望一天画一幅的，结果到现在只画完了两幅，剩下衣服答应朋友要描的，也画了好久，这周回去看看能不能画完然后画一幅新的</p>
-<p>得益于我在 GitHub 里发现了 <a target="_blank" rel="noopener" href="https://github.com/niudai/How-to-be-a-good-programmer">程序员修炼宝典</a> 这个项目，我就下载了几本关于 Linux 的电子书看，因为手头并没有什么顺手的阅读设备（PDF 格式手机读着累，Yogabook 拿着压手），也就只读了百来页</p>
-<p>在约一年前我就有学习 C++ 的想法，当时只会在网上搜一些 C++ 写的程序，然后仿写出来自己试着理解，因为没有系统性的学习和要写的程序，也就不了了之</p>
-<p>似乎是从这个月初开始，我打算买本书正式学学 C 了，现在是感觉之前打算直接冲 C++ 是有点幼稚了，我翻了翻淘宝，但并没有买，去找了电子书版的 《C Prime Plus》 ，从 9 号我每天都在把《C Prime Plus》里需要写，或要理解的程序重新写一遍、写好注释，然后提交到私人 GitHub Repository 里，不过目前还没公开，等我学完那本书里需要学的东西后会公开的</p>
-<p>之前还试过做音乐，不过创作细胞还是太没活力了，不确定以后还会不会试试学，但感觉音乐的门槛是想学的几个东西中最高的 😢</p>
-<h2 id="假期打算与发牢骚"><a href="#假期打算与发牢骚" class="headerlink" title="假期打算与发牢骚"></a>假期打算与发牢骚</h2><p>也快接近五一假期了，学习 C 语言也有十来天了，虽然按照书里的学了快两百页，感觉总是只学到了点皮毛，要记数值对应的表达方式是有点费劲，在学校每天也只有晚自习的时间会学一个小时左右，这个进度下去得学多久啊…….</p>
-<p>感觉自己是有点懒了，从学习 C 语言或是写博客来说都是，这篇文章是从四月七日开始打算写的，但是现在已经是四月月底了</p>
-<p>上周的调休导致我也没回家，答应给朋友画的画还是没有画完，五一假期里一定要画完</p>
-<p>说到五一，五一就到明日方舟三周年了，但从这个学期开始真的很少很少玩了，好像当初停止玩是因为 BOSS 太难打不过去(当时查攻略的话应该是没问题的)</p>
-<p><img src="/css/images/hero.png"><br>Lineage OS 在 26 号的时候正式更新了 <a target="_blank" rel="noopener" href="https://lineageos.org/Changelog-26">Lineage OS 19</a>，不知道 <a target="_blank" rel="noopener" href="https://github.com/Linux4">Linux4</a> 大佬什么时候让我的 s10e 吃上 Official Lineage OS 🤤</p>
-<p>近几年半导体的东西价格都在涨，显卡 内存 硬盘 以及本来是打着廉价开发板的树莓派，现在都涨了，想整块 zero 2 w 当随身 Linux 主机的 😢</p>
-<p>这篇文章就写到这吧，<del>摸到月底发还能算月更博客</del> 🥴</p>
-
-      
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                
+    <div class="container profile-container">
+    <div class="intro">
+        <div class="avatar">
+            <a href="/"><img src="/images/IMG_20220506_162446_384.jpg"></a>
+        </div>
+        <div class="nickname">Hubert Chen</div>
+        <div class="description"><p>你好呀 👋</p>
+</div>
+        <div class="links">
+            
+                
+                    <a class="link-item" title="Blog" href="/archives">
+                        
+                        
+                            <i class="iconfont icon-blog"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/interstellar750">
+                        
+                        
+                            <i class="iconfont icon-twitter"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Github" target="_blank" rel="noopener" href="https://github.com/Interstellar750">
+                        
+                        
+                            <i class="iconfont icon-github"></i>
+                        
+                    </a>
+                
+            
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://trle5.tk/2022/04/07/Page4/" data-id="cl2hkk7hl0000cys606tl8efo" data-title="闲谈杂聊" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
 
-
-  
-    <article id="post-搭建一个自己的博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/05/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time class="dt-published" datetime="2022-03-05T11:01:48.000Z" itemprop="datePublished">2022-03-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/05/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">搭建一个自己的博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>  你好！这里是 Hubert ，欢迎来我的博客看文章！</p>
-<h2 id="如何搭建自己的博客"><a href="#如何搭建自己的博客" class="headerlink" title="如何搭建自己的博客"></a>如何搭建自己的博客</h2><p> 搭建博客并没有那么困难，大部分的时候只需要跟着步骤走就行，当然有时候碰见bug会是不可避免的事，这就得看运气了<del>，我是属于运气差的那一类人。</del></p>
-<p> 本文里使用的博客框架为 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">Hexo</a> ，服务器使用 <a href="github.io">GitHub Pages</a>。域名可使用 Github Pages 默认域名或自定义</p>
-<h2 id="那么就正式开始吧，毕竟我也不会写太多介绍"><a href="#那么就正式开始吧，毕竟我也不会写太多介绍" class="headerlink" title="那么就正式开始吧，毕竟我也不会写太多介绍"></a>那么就正式开始吧，毕竟我也不会写太多介绍</h2><h3 id="搭建博客需要准备的东西："><a href="#搭建博客需要准备的东西：" class="headerlink" title="搭建博客需要准备的东西："></a>搭建博客需要准备的东西：</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 可正常使用且没有被限制的 GitHub 账户</span><br><span class="line">2. 搭载 Windows、Linux 或 Android 的设备</span><br><span class="line">3. 良好的网络环境（我不知道啊你不要问我）</span><br></pre></td></tr></table></figure>
-<p>首先创建 GitHub 账户，因为我们搭建博客要用到 GitHub Pages ，注册过程我就不多阐述了，看不懂可以打开浏览器的翻译功能，也可以在搜索引擎寻找对应的教程。<br>创建完了 GitHub 账户，需要创建一个仓库（Repositories）用于存放博客文件和启用 GitHub Pages 。</p>
-<p>登录到 GitHub 网页版后，可以看见左上角的 <strong>Recent Repositories</strong> 旁有个 <strong>New</strong> 按钮，点击它来新建仓库<img src="https://trle5.tk/css/images/github202203051935.png"><br>如果是使用手机来访问，可以进入 <code>https://github.com/&lt;你的github用户名&gt;?tab=repositories</code> ，就能看见那个New按钮了 <img src="https://trle5.tk/css/images/github202203051951.png"></p>
-<p>创建仓库需要设定仓库名与仓库类型（公开或私密），如果你希望使用 Github Pages 给的二级域名，你需要把仓库名设为 <code>&lt;你的GitHub用户名&gt;.github.io</code> ，否则你的 Github Pages 网页会变成 <code>&lt;你的GitHub用户名&gt;.github.io/&lt;创建的仓库名&gt;</code>，但如果你使用自定义域名的话随便设置都没问题，仓库类型推荐使用公开，因为似乎只有 Github 付费用户才能在私密的仓库中开启 Github Pages 功能。</p>
-<p>到这里  Github 的设置基本就完成了，接下来就应该开始配置 hexo 客户端了</p>
-<h2 id="配置-Hexo-客户端"><a href="#配置-Hexo-客户端" class="headerlink" title="配置 Hexo 客户端"></a>配置 Hexo 客户端</h2><p>一旦配置完 Hexo 客户端，博客控制文件是全平台通用的，所以这里只说明如何在各个客户端配置，搭建以及部署后面统一讲。</p>
-<hr>
-<h3 id="在-Windows-设备上配置-Hexo-客户端"><a href="#在-Windows-设备上配置-Hexo-客户端" class="headerlink" title="在 Windows 设备上配置 Hexo 客户端"></a>在 Windows 设备上配置 Hexo 客户端</h3><p>首先要安装 Windows 版 <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node.js</a> ，选择 <strong>Windows Installer</strong></p>
-<p>安装完成后测试是否正常</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>都能正常提示版本号的话，那就可以直接安装 Hexo 客户端</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo version  # 检查 hexo 是否正常</span><br></pre></td></tr></table></figure>
-
-<p>然后还需要安装一下 Git , 方法有两个。</p>
-<ol>
-<li>进入 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git官网</a> 下载常规安装包</li>
-<li>使用winget <code>winget install --id Git.Git -e --source winget</code></li>
-</ol>
-<p>这时候就可以部署 Hexo 了，创建一个放博客的文件夹比较好，推荐在用户文件夹下创建一个 hexo 文件夹给它，当然如果你已经在其他平台配置过了，也可以cd到那个文件夹直接进去继续操作。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:/Users/&lt;你的用户名&gt;/hexo/</span><br><span class="line">cd /d &lt;目录&gt;  # CMD用户使用这条命令来切换目录</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p>到这里的 Windwos上的 hexo 已经部署完成了</p>
-<hr>
-<h3 id="在-Linux-设备上配置-Hexo-客户端"><a href="#在-Linux-设备上配置-Hexo-客户端" class="headerlink" title="在 Linux 设备上配置 Hexo 客户端"></a>在 Linux 设备上配置 Hexo 客户端</h3><p>相比于 Windows ，Linux 上的 Hexo 安装更为简单，只用在命令行运行几个命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install nodejs</span><br><span class="line">$ sudo apt install git # 如果已经安装了git可以跳过这一步</span><br><span class="line">$ sudo npm install -g hexo-cli</span><br><span class="line">$ hexo version</span><br></pre></td></tr></table></figure>
-
-<p>挺简单的，接着在<code>~/</code>下创建一个<code>hexo</code>文件夹再部署就行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir hexo</span><br><span class="line">$ cd hexo</span><br><span class="line">$ hexo init # 此步如果有报错，请使用sudo执行或清空部署文件夹</span><br></pre></td></tr></table></figure>
-
-<p>完成</p>
-<hr>
-<h2 id="在-Android-设备上配置-Hexo-客户端"><a href="#在-Android-设备上配置-Hexo-客户端" class="headerlink" title="在 Android 设备上配置 Hexo 客户端"></a>在 Android 设备上配置 Hexo 客户端</h2><h3 id="由于考虑到一些手机品牌的不可获取-root-性，本文章使用-Termux-来运行命令"><a href="#由于考虑到一些手机品牌的不可获取-root-性，本文章使用-Termux-来运行命令" class="headerlink" title="由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令"></a>由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令</h3><h4 id="但由于-termux-的默认用户文件夹是在-data-data-com-ternux-files-home-下，没有-root-权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到-GitHub-Pages-上，但后端控制文件可能得找其他办法传输出来。"><a href="#但由于-termux-的默认用户文件夹是在-data-data-com-ternux-files-home-下，没有-root-权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到-GitHub-Pages-上，但后端控制文件可能得找其他办法传输出来。" class="headerlink" title="但由于 termux 的默认用户文件夹是在 /data/data/com.ternux/files/home/ 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来。"></a>但由于 termux 的默认用户文件夹是在 <code>/data/data/com.ternux/files/home/</code> 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来。</h4><h4 id="不然也可以尝试在手机上安装完整-Linux-虚拟机"><a href="#不然也可以尝试在手机上安装完整-Linux-虚拟机" class="headerlink" title="不然也可以尝试在手机上安装完整 Linux 虚拟机"></a>不然也可以尝试在手机上安装完整 Linux 虚拟机</h4><h3 id="安装-Termux"><a href="#安装-Termux" class="headerlink" title="安装 Termux"></a>安装 Termux</h3><p>下载链接 <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux"><del>Play Store</del></a> 不推荐，已经很久没更新了 | <a target="_blank" rel="noopener" href="https://f-droid.org/repo/com.termux_118.apk">F-Droid</a> | <a target="_blank" rel="noopener" href="https://t5d.trle5.tk/Apk/com.termux_118_f-droid.apk">Hubert’s Box</a></p>
-<p>安装并打开，等待下载需要的配置文件</p>
-<p>更新源与升级</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pkg update</span><br><span class="line">$ pkg upgrade</span><br><span class="line"># 如果以上命令不可用，可以试试把pkg改成apt，即 apt update</span><br></pre></td></tr></table></figure>
-
-<p>upgrade 中途可能有选择停顿，可根据个人喜好选择</p>
-<p>安装 Termux root 工具</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pkg install tsu # 手机有 root 权限选择这个</span><br><span class="line">$ pkg install proot # 手机没有 root 权限选择这个</span><br></pre></td></tr></table></figure>
-
-<p>切换到 root</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tsu # tsu使用这条命令，执行后会向手机索要root权限</span><br><span class="line">$ termux-chroot # proot 使用这条命令，运行后 ~$ 没有变化 ，但权限有变</span><br></pre></td></tr></table></figure>
-
-<p>安装 nodejs 和 git 以及 hexo-cli </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ pkg install nodejs</span><br><span class="line">$ node -v &amp;&amp; npm -v # 查看nodejs与npm的版本</span><br><span class="line">$ pkg install git # 已安装git可以忽略此行</span><br><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo version</span><br></pre></td></tr></table></figure>
-
-<p>这下 hexo 客户端已经成功部署到 Termux 了，来创建文件夹部署博客文件吧</p>
-<p>Termux 的默认文件夹在安卓系统的 <code>/data/data/com.termux/files/home/</code> ，最好也是在 home 下创建一个 hexo 文件夹部署进去</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir hexo # 如果是用的系统 su ，记得观察路径是不是在 Termux 的 home 文件夹下( termux-chroot 显示为 ~$ )，以免破坏 Android 系统</span><br><span class="line">$ cd hexo</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-
-<p>走完进度条也就部署完成了</p>
-<h3 id="在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行"><a href="#在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行" class="headerlink" title="在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行"></a>在三个平台的部署都完成了，接下来要尝试让它在本地服务器上运行</h3><h4 id="下面的-hexo-generate-hexo-server-和后面要讲的-hexo-deploy，都可以使用-hexo-g-hexo-s-hexo-d来代替，作用是一样的，也就是-generate-server-deploy-三个单词的首字母。"><a href="#下面的-hexo-generate-hexo-server-和后面要讲的-hexo-deploy，都可以使用-hexo-g-hexo-s-hexo-d来代替，作用是一样的，也就是-generate-server-deploy-三个单词的首字母。" class="headerlink" title="下面的 hexo generate  hexo server 和后面要讲的 hexo deploy，都可以使用 hexo g hexo s hexo d来代替，作用是一样的，也就是 generate server deploy 三个单词的首字母。"></a>下面的 <code>hexo generate</code>  <code>hexo server</code> 和后面要讲的 <code>hexo deploy</code>，都可以使用 <code>hexo g</code> <code>hexo s</code> <code>hexo d</code>来代替，作用是一样的，也就是 <strong>g</strong>enerate <strong>s</strong>erver <strong>d</strong>eploy 三个单词的首字母。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate # 初始化博客并生成初始页面，后期每写一篇新文章也需要再执行一次</span><br><span class="line">hexo server # 运行本地服务器，一般用来测试和在推送前检查是否有问题</span><br></pre></td></tr></table></figure>
-<p>接下来会提示本地服务器已经启用，访问 <code>http://localhost:4000/</code> 或 <code>http://127.0.0.1:4000/</code> 都可以查看初始博客。</p>
-<p>配置文件并部署博客到 Github Pages</p>
-<p>进入你的hexo文件夹，然后编辑其中的 <code>_config.yml</code> 文件</p>
-<p>下面放一些正常的设置类型</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo # 博客主标题</span><br><span class="line">subtitle:   # 博客副标题</span><br><span class="line">author: John Doe # 博客著名者</span><br><span class="line">language: en # 中文填 zh-CN</span><br><span class="line">timezone: Asia/Shanghai # 时间位置，需要按照规范填写</span><br><span class="line">url: http://example.com # 网站链接，影响到点击主副标题的跳转，可以填自定义域名或 Github Pages 二级域名</span><br></pre></td></tr></table></figure>
-
-<p>接下来是部署设置，配置文件也是在 <code>_config.yml</code> 文件里编辑</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># https://hexo.io/docs/one-command-deployment 查看 hexo 部署帮助文档</span><br><span class="line">deploy: # 此处不用填写，留空</span><br><span class="line">  type: git # 填 git 或 heroku ，根据你的部署位置来</span><br><span class="line">  repository:  https://github.com/&lt;/username&gt;/&lt;username&gt;.github.io # 也可以填你名下的其他仓库，正确即可</span><br><span class="line">  branch: main # 或 master，根据分支来，例如我的就是 hexo</span><br></pre></td></tr></table></figure>
-
-<h3 id="这下就可以部署到-Github-Pages-了，不过还得设定一些东西"><a href="#这下就可以部署到-Github-Pages-了，不过还得设定一些东西" class="headerlink" title="这下就可以部署到 Github Pages 了，不过还得设定一些东西"></a>这下就可以部署到 Github Pages 了，不过还得设定一些东西</h3><p>确保你的终端里配置有git，然后设置一下用户信息</p>
-<p>也可以手动编辑，Windows 的 .gitconfig 文件在用户文件夹目录，Linux 在用户文件夹下，Termux 在 home 文件夹下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;&lt;username&gt;&quot; </span><br><span class="line">git config --global user.mail &quot;&lt;username@github.com&gt;&quot;</span><br><span class="line"># 可能需要使用 root 权限执行</span><br><span class="line"># 可以不用加 &quot;&quot; 号，只是因为用户名有空格的话可能会造成git只记录下前一半</span><br></pre></td></tr></table></figure>
-
-<p>呃，还得安装一下hexo提供的一键部署工具</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hexo  # 需要在博客文件夹里执行</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<h2 id="到这里基本上就完成了，来部署吧！"><a href="#到这里基本上就完成了，来部署吧！" class="headerlink" title="到这里基本上就完成了，来部署吧！"></a>到这里基本上就完成了，来部署吧！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 慎重操作，会清除所有数据，但不会删除 _config.yml 文件，非必要选项</span><br><span class="line">hexo g # 重新生成默认博客，source文件夹里有新文章时会生成新的页面</span><br><span class="line">hexo d # 复制 public 文件夹里的文件到 .depoly_git 文件夹里，然后根据 _config.yml 里的设置开始部署</span><br></pre></td></tr></table></figure>
-
-<p>接下来git 会向你请求设定的部署网站的用户名与密钥，这里以 GitHub 作为演示</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Username for &#x27;https://github.com&#x27;:&lt;username&gt;</span><br><span class="line">Password for &#x27;https://&lt;username&gt;@github.com&#x27;:&lt;yourpasswd&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="事实上这个时候填你得-Github-账号密码是没有用的，为了安全你得去-GitHub-申请一个-Personal-access-tokens"><a href="#事实上这个时候填你得-Github-账号密码是没有用的，为了安全你得去-GitHub-申请一个-Personal-access-tokens" class="headerlink" title="事实上这个时候填你得 Github 账号密码是没有用的，为了安全你得去 GitHub 申请一个 Personal access tokens"></a>事实上这个时候填你得 Github 账号密码是没有用的，为了安全你得去 GitHub 申请一个 Personal access tokens</h3><ol>
-<li>访问 <a target="_blank" rel="noopener" href="https://github.com/settings/tokens/">https://github.com/settings/tokens/</a></li>
-<li>点击 <strong>Generate new token</strong></li>
-<li>验证密码 ，然后输入一个名称，以及选择过期时间，为了安全，推荐不要设置成不过期，做好定期更换</li>
-<li>在下方选择该令牌的权限，不懂可以全选，也可以自定义</li>
-<li>点击 Generate token，生成令牌</li>
-</ol>
-<p>生成的令牌格式为 <code>ghp_1234567890abcdefghijklmnopqrst</code> ，也就是<code>ghp_</code> 加上<code>0-9</code> <code>a-z</code> <code>A-Z</code> 的随机生成数，一般也记不住，但也不要为方便直接保存在明文文件里</p>
-<h3 id="后面就可以继续博客的部署了，接下来说说博客自定义域名与DNS解析如何设置的问题"><a href="#后面就可以继续博客的部署了，接下来说说博客自定义域名与DNS解析如何设置的问题" class="headerlink" title="后面就可以继续博客的部署了，接下来说说博客自定义域名与DNS解析如何设置的问题"></a>后面就可以继续博客的部署了，接下来说说博客自定义域名与DNS解析如何设置的问题</h3><p>如果需要自定义域名，请在hexo的 <code>public</code> 和 <code>.deploy_git</code> 文件夹里都新建一个 <code>CNAME</code> 文件，用文本编辑器打开，里面填上你希望使用的域名，也可以在项目的设置里找到 Pages ，再找到 Custom domain ，填入域名，但你不在 hexo 里放的话，每更新 <code>(hexo d)</code> 一次你就得重新进这个页面设置一次，很麻烦</p>
-<h3 id="自定义域名的DNS设置"><a href="#自定义域名的DNS设置" class="headerlink" title="自定义域名的DNS设置"></a>自定义域名的DNS设置</h3><p>这个我也摸索了很久，但现在碰壁多了也就会了</p>
-<p>按照 <a target="_blank" rel="noopener" href="https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Github 的 DNS 解析设置</a>，需要创建四条 <code>A</code> 记录，并分别定向到：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name: @ # 全都要使用 @ 号</span><br><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure>
-
-<p>还有四条 <code>AAAA</code> 记录，也得分别定向到：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name: @ # 全都要使用 @ 号</span><br><span class="line">2606:50c0:8000::153</span><br><span class="line">2606:50c0:8001::153</span><br><span class="line">2606:50c0:8002::153</span><br><span class="line">2606:50c0:8003::153</span><br></pre></td></tr></table></figure>
-
-<p>以及一条 <code>CNAME</code> 记录</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name: www </span><br><span class="line">&lt;username&gt;.github.io. # 也就是GitHub Pages的默认页面</span><br></pre></td></tr></table></figure>
-
-<p>填写完成的样子就如下图，顺序没有关系</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>名称</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>A</td>
-<td>@</td>
-<td>185.199.108.153</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>185.199.109.153</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>185.199.110.153</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>185.199.111.153</td>
-</tr>
-<tr>
-<td>AAAA</td>
-<td>@</td>
-<td>2606:50c0:8000::153</td>
-</tr>
-<tr>
-<td>AAAA</td>
-<td>@</td>
-<td>2606:50c0:8001::153</td>
-</tr>
-<tr>
-<td>AAAA</td>
-<td>@</td>
-<td>2606:50c0:8002::153</td>
-</tr>
-<tr>
-<td>AAAA</td>
-<td>@</td>
-<td>2606:50c0:8003::153</td>
-</tr>
-<tr>
-<td>CNAME</td>
-<td>www</td>
-<td>username.github.io.</td>
-</tr>
-</tbody></table>
-<p>设置完成点击保存，然后等个十来分钟应该就可以访问自定义域名了，如果访问出现 Github Pages 页面，但没有定位到你的博客，那可能是你 Github 仓库的 <code>CNAME</code> 文件被顶掉了</p>
-<p>到这里你的博客就搭建完成了，写文章的教程我会在后面再发一篇教程</p>
-<p>参考文章：</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br><a target="_blank" rel="noopener" href="https://www.sqlsec.com/2018/05/termux.html">Termux 高级终端安装使用配置教程</a></p>
-
-      
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>©2022 Hubert Chen | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://trle5.tk/2022/03/05/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" data-id="cl0dsos8p0000a5s60oew8y5z" data-title="搭建一个自己的博客" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-欢迎参观" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/" class="article-date">
-  <time class="dt-published" datetime="2022-03-01T03:42:55.000Z" itemprop="datePublished">2022-03-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">欢迎参观</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="你好，欢迎来到我的博客"><a href="#你好，欢迎来到我的博客" class="headerlink" title="你好，欢迎来到我的博客"></a>你好，欢迎来到我的博客</h2><p>这个博客由我创建于2022年01月24日，起初是想跟网络上的大佬一样搭个自己的博客，不过现在搭好了也不知道写些什么。</p>
-<h2 id="关于我-Hubert-Chen"><a href="#关于我-Hubert-Chen" class="headerlink" title="关于我 (Hubert Chen)"></a>关于我 (Hubert Chen)</h2><h3 id="兴趣爱好"><a href="#兴趣爱好" class="headerlink" title="兴趣爱好"></a>兴趣爱好</h3><p>给手机刷系统，例如 <a target="_blank" rel="noopener" href="https://lineageos.org/">Lineage OS</a> <a target="_blank" rel="noopener" href="https://sailfishos.org/">Sailfish OS</a><br>会些基础的Linux操作<del>，不过十分容易碰见bug</del><br>会画画 (非常非常基础，目前只会描些图)<br>听音乐使用的软件： <a target="_blank" rel="noopener" href="https://spotify.com/">Spotify</a>  <a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a> 偶尔会在网易云音乐里上传一些歌词<br>玩游戏会用的软件： <a target="_blank" rel="noopener" href="https://store.steampowered.com/">Steam</a> <a target="_blank" rel="noopener" href="https://www.ubisoft.com/">Ubisoft</a> <a target="_blank" rel="noopener" href="https://www.xbox.com/">Xbox(云游戏)</a><br>活跃的社交平台：<a target="_blank" rel="noopener" href="https://t.me/trle5">Telegram</a> <a target="_blank" rel="noopener" href="https://twitter.com/interstellar750">Twitter</a> <a target="_blank" rel="noopener" href="https://github.com/Interstellar750/">GitHub</a> 国内的QQ微信也在用，但并不太喜欢，而且放出来可能会泄露个人信息，所以就不公开了</p>
-<h2 id="建站历程："><a href="#建站历程：" class="headerlink" title="建站历程："></a>建站历程：</h2><p>2022/01/24 初次建立并使用 <a target="_blank" rel="noopener" href="https://github.io/">GitHub Pages</a> 来作为服务器 （其实并不是第一次，前前后后试了好几次，因为碰到了好多bug）</p>
-<p>2022/01/29 在 <a href="freenom.com">Freenom</a> 上申请了12个月的免费域名 trle5.tk ，但由于不会设置DNS解析，依然用着 <a target="_blank" rel="noopener" href="https://github.io/">GitHub Pages</a> 的默认域名</p>
-<p>2022/02/26 由于 x10m2 上的 Sailfish OS 因为未知问题操作很卡，把 hexo 后端备份出来迁移到了s10e，使用 <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux">Termux</a> 来继续运维</p>
-<p>2022/02/27 将域名 DNS 解析托管到 <a href="godaddy.com">GoDaddy</a> ，成功用上了自定义域名</p>
-<p>2022/03/08 在 reg.ru 购买了一年的 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> 域名，用于存放文件，本站可能有一些图片文件会储存在里面</p>
-<p>2022/03/14 更换为由 <a href="freenom.com">Freenom</a> 提供的 DNS 解析</p>
-<p>2022/03/15 把 blackbox 的域名从 <a target="_blank" rel="noopener" href="https://trle5.xyz/">trle5.xyz</a> 迁移到 <a target="_blank" rel="noopener" href="https://t5d.trle5.tk/">t5d.trle5.tk</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://trle5.tk/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/" data-id="cl07l4ri80000pts6c776b22p" data-title="欢迎参观" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-testagain" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/26/testagain/" class="article-date">
-  <time class="dt-published" datetime="2022-01-26T15:40:35.000Z" itemprop="datePublished">2022-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/01/26/testagain/">testagain</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <iframe border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&amp;id=1300697588&amp;auto=0&amp;height=66" width="330" height="86" frameborder="no"></iframe>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://trle5.tk/2022/01/26/testagain/" data-id="ckyvptgh50000d07ygr4nf7az" data-title="testagain" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-pages" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/26/pages/" class="article-date">
-  <time class="dt-published" datetime="2022-01-26T15:23:12.141Z" itemprop="datePublished">2022-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/01/26/pages/">这是一个测试页面</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><u>测试下划线</u><br><code>测试等宽abc</code><br><a target="_blank" rel="noopener" href="https://github.com/">测试链接</a><br><img src="/css/images/test.png" alt="测试图片"><br>test netease music</p>
-<iframe border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&amp;id=1300697588&amp;auto=0&amp;height=66" width="330" height="86" frameborder="no"></iframe>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://trle5.tk/2022/01/26/pages/" data-id="ckyrj22dy0000b67y367o50z2" data-title="这是一个测试页面" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/24/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-01-23T16:20:05.813Z" itemprop="datePublished">2022-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/01/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://trle5.tk/2022/01/24/hello-world/" data-id="ckyrh7fym0000p77ydgtc2sje" data-title="Hello World" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/04/07/Page4/">闲谈杂聊</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/05/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">搭建一个自己的博客</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">欢迎参观</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/26/testagain/">testagain</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/26/pages/">这是一个测试页面</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 Hubert Chen<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
 
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
 </body>
+
 </html>

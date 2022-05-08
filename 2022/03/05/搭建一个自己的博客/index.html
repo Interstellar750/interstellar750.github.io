@@ -71,7 +71,7 @@
                 
                     <a class="menu-item" href="/archives">文章</a>
                 
-                    <a class="menu-item" href="/tags">标签</a>
+                    <a class="menu-item" href="/tag">标签</a>
                 
                     <a class="menu-item" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">关于</a>
                 
@@ -94,7 +94,7 @@
                 
                     <a class="menu-item" href="/archives">文章</a>
                 
-                    <a class="menu-item" href="/tags">标签</a>
+                    <a class="menu-item" href="/tag">标签</a>
                 
                     <a class="menu-item" href="/2022/03/01/%E6%AC%A2%E8%BF%8E%E5%8F%82%E8%A7%82/">关于</a>
                 
@@ -204,7 +204,7 @@
             <p>  你好！这里是 Hubert ，欢迎来我的博客看文章！</p>
 <h2 id="如何搭建自己的博客"><a href="#如何搭建自己的博客" class="headerlink" title="如何搭建自己的博客"></a>如何搭建自己的博客</h2><p> 搭建博客并没有那么困难，大部分的时候只需要跟着步骤走就行，当然有时候碰见bug会是不可避免的事，这就得看运气了<del>，我是属于运气差的那一类人。</del></p>
 <p> 本文里使用的博客框架为 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">Hexo</a> ，服务器使用 <a href="github.io">GitHub Pages</a>。域名可使用 Github Pages 默认域名或自定义</p>
-<h2 id="那么就正式开始吧，毕竟我也不会写太多介绍"><a href="#那么就正式开始吧，毕竟我也不会写太多介绍" class="headerlink" title="那么就正式开始吧，毕竟我也不会写太多介绍"></a>那么就正式开始吧，毕竟我也不会写太多介绍</h2><h3 id="搭建博客需要准备的东西："><a href="#搭建博客需要准备的东西：" class="headerlink" title="搭建博客需要准备的东西："></a>搭建博客需要准备的东西：</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 可正常使用且没有被限制的 GitHub 账户</span><br><span class="line">2. 搭载 Windows、Linux 或 Android 的设备</span><br><span class="line">3. 良好的网络环境（我不知道啊你不要问我）</span><br></pre></td></tr></table></figure>
+<h3 id="那么就正式开始吧，毕竟我也不会写太多介绍"><a href="#那么就正式开始吧，毕竟我也不会写太多介绍" class="headerlink" title="那么就正式开始吧，毕竟我也不会写太多介绍"></a>那么就正式开始吧，毕竟我也不会写太多介绍</h3><h3 id="搭建博客需要准备的东西："><a href="#搭建博客需要准备的东西：" class="headerlink" title="搭建博客需要准备的东西："></a>搭建博客需要准备的东西：</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 可正常使用且没有被限制的 GitHub 账户</span><br><span class="line">2. 搭载 Windows、Linux 或 Android 的设备</span><br><span class="line">3. 良好的网络环境（我不知道啊你不要问我）</span><br></pre></td></tr></table></figure>
 <p>首先创建 GitHub 账户，因为我们搭建博客要用到 GitHub Pages ，注册过程我就不多阐述了，看不懂可以打开浏览器的翻译功能，也可以在搜索引擎寻找对应的教程。<br>创建完了 GitHub 账户，需要创建一个仓库（Repositories）用于存放博客文件和启用 GitHub Pages 。</p>
 <p>登录到 GitHub 网页版后，可以看见左上角的 <strong>Recent Repositories</strong> 旁有个 <strong>New</strong> 按钮，点击它来新建仓库<img src="/images/post/github202203051935.png"><br>如果是使用手机来访问，可以进入 <code>https://github.com/&lt;你的github用户名&gt;?tab=repositories</code> ，就能看见那个New按钮了 <img src="/images/post/github202203051951.png"></p>
 <p>创建仓库需要设定仓库名与仓库类型（公开或私密），如果你希望使用 Github Pages 给的二级域名，你需要把仓库名设为 <code>&lt;你的GitHub用户名&gt;.github.io</code> ，否则你的 Github Pages 网页会变成 <code>&lt;你的GitHub用户名&gt;.github.io/&lt;创建的仓库名&gt;</code>，但如果你使用自定义域名的话随便设置都没问题，仓库类型推荐使用公开，因为似乎只有 Github 付费用户才能在私密的仓库中开启 Github Pages 功能。</p>
@@ -235,7 +235,7 @@
 
 <p>完成</p>
 <hr>
-<h2 id="在-Android-设备上配置-Hexo-客户端"><a href="#在-Android-设备上配置-Hexo-客户端" class="headerlink" title="在 Android 设备上配置 Hexo 客户端"></a>在 Android 设备上配置 Hexo 客户端</h2><h3 id="由于考虑到一些手机品牌的不可获取-root-性，本文章使用-Termux-来运行命令"><a href="#由于考虑到一些手机品牌的不可获取-root-性，本文章使用-Termux-来运行命令" class="headerlink" title="由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令"></a>由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令</h3><h4 id="但由于-termux-的默认用户文件夹是在-data-data-com-ternux-files-home-下，没有-root-权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到-GitHub-Pages-上，但后端控制文件可能得找其他办法传输出来。"><a href="#但由于-termux-的默认用户文件夹是在-data-data-com-ternux-files-home-下，没有-root-权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到-GitHub-Pages-上，但后端控制文件可能得找其他办法传输出来。" class="headerlink" title="但由于 termux 的默认用户文件夹是在 /data/data/com.ternux/files/home/ 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来。"></a>但由于 termux 的默认用户文件夹是在 <code>/data/data/com.ternux/files/home/</code> 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来。</h4><h4 id="不然也可以尝试在手机上安装完整-Linux-虚拟机"><a href="#不然也可以尝试在手机上安装完整-Linux-虚拟机" class="headerlink" title="不然也可以尝试在手机上安装完整 Linux 虚拟机"></a>不然也可以尝试在手机上安装完整 Linux 虚拟机</h4><h3 id="安装-Termux"><a href="#安装-Termux" class="headerlink" title="安装 Termux"></a>安装 Termux</h3><p>下载链接 <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux"><del>Play Store</del></a> 不推荐，已经很久没更新了 | <a target="_blank" rel="noopener" href="https://f-droid.org/repo/com.termux_118.apk">F-Droid</a> | <a target="_blank" rel="noopener" href="https://t5d.trle5.tk/Apk/com.termux_118_f-droid.apk">Hubert’s Box</a></p>
+<h3 id="在-Android-设备上配置-Hexo-客户端"><a href="#在-Android-设备上配置-Hexo-客户端" class="headerlink" title="在 Android 设备上配置 Hexo 客户端"></a>在 Android 设备上配置 Hexo 客户端</h3><h3 id="由于考虑到一些手机品牌的不可获取-root-性，本文章使用-Termux-来运行命令"><a href="#由于考虑到一些手机品牌的不可获取-root-性，本文章使用-Termux-来运行命令" class="headerlink" title="由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令"></a>由于考虑到一些手机品牌的不可获取 root 性，本文章使用 Termux 来运行命令</h3><h4 id="但由于-termux-的默认用户文件夹是在-data-data-com-ternux-files-home-下，没有-root-权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到-GitHub-Pages-上，但后端控制文件可能得找其他办法传输出来。"><a href="#但由于-termux-的默认用户文件夹是在-data-data-com-ternux-files-home-下，没有-root-权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到-GitHub-Pages-上，但后端控制文件可能得找其他办法传输出来。" class="headerlink" title="但由于 termux 的默认用户文件夹是在 /data/data/com.ternux/files/home/ 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来。"></a>但由于 termux 的默认用户文件夹是在 <code>/data/data/com.ternux/files/home/</code> 下，没有 root 权限可能无法读取和写入文件，用户可能要慎重考虑一下，博客可以部署到 GitHub Pages 上，但后端控制文件可能得找其他办法传输出来。</h4><h4 id="不然也可以尝试在手机上安装完整-Linux-虚拟机"><a href="#不然也可以尝试在手机上安装完整-Linux-虚拟机" class="headerlink" title="不然也可以尝试在手机上安装完整 Linux 虚拟机"></a>不然也可以尝试在手机上安装完整 Linux 虚拟机</h4><h3 id="安装-Termux"><a href="#安装-Termux" class="headerlink" title="安装 Termux"></a>安装 Termux</h3><p>下载链接 <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux"><del>Play Store</del></a> 不推荐，已经很久没更新了 | <a target="_blank" rel="noopener" href="https://f-droid.org/repo/com.termux_118.apk">F-Droid</a> | <a target="_blank" rel="noopener" href="https://t5d.trle5.tk/Apk/com.termux_118_f-droid.apk">Hubert’s Box</a></p>
 <p>安装并打开，等待下载需要的配置文件</p>
 <p>更新源与升级</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pkg update</span><br><span class="line">$ pkg upgrade</span><br><span class="line"># 如果以上命令不可用，可以试试把pkg改成apt，即 apt update</span><br></pre></td></tr></table></figure>
